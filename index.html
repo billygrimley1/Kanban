@@ -1,1 +1,250 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c3{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c2{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 doc-content"><p class="c0"><span class="c1">&lt;!DOCTYPE html&gt;</span></p><p class="c0"><span class="c1">&lt;html lang=&quot;en&quot;&gt;</span></p><p class="c0"><span class="c1">&lt;head&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;meta charset=&quot;UTF-8&quot; /&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;title&gt;Customer Success Kanban&lt;/title&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;!-- Importing Poppins Font --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot; /&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;style&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; * {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; box-sizing: border-box;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; body {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; font-family: &#39;Poppins&#39;, sans-serif;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; background-color: #f4f7fb;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 20px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; h1 {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; color: #333;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; /* Branding header inspired by Doctify.com */</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; header {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; background-color: #00a1e4;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 10px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; /* Input area for new customer names */</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .new-card {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; justify-content: center;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .new-card input {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 10px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; font-size: 16px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; width: 300px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border: 2px solid #00a1e4;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border-radius: 4px 0 0 4px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; outline: none;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .new-card button {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 10px 20px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; font-size: 16px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border: none;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; background-color: #00a1e4;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border-radius: 0 4px 4px 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .new-card button:hover {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; background-color: #008acb;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; /* Kanban board styles */</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .board {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; overflow-x: auto;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .column {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; background-color: #fff;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; flex: 1;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; min-width: 200px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border-radius: 8px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; box-shadow: 0 2px 5px rgba(0,0,0,0.1);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 10px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .column h2 {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin-bottom: 10px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; font-size: 18px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; color: #333;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .card-container {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; min-height: 100px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .card {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; background-color: #fefefe;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border: 1px solid #ddd;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border-radius: 4px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 8px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin-bottom: 8px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; cursor: grab;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .card:active {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; cursor: grabbing;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; /* Adoption summary section */</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .summary {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; background-color: #fff;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; border-radius: 8px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; padding: 15px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; box-shadow: 0 2px 5px rgba(0,0,0,0.1);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; max-width: 400px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin: 0 auto;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .summary h3 {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin-bottom: 10px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; color: #333;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; .summary p {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; font-size: 16px;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; margin: 5px 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &lt;/style&gt;</span></p><p class="c0"><span class="c1">&lt;/head&gt;</span></p><p class="c0"><span class="c1">&lt;body&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;header&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;h1&gt;Doctify Customer Success Kanban&lt;/h1&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;/header&gt;</span></p><p class="c0"><span class="c1">&nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &lt;!-- New Customer Card Input --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;div class=&quot;new-card&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;input type=&quot;text&quot; id=&quot;customerName&quot; placeholder=&quot;Enter customer name...&quot; /&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;button id=&quot;addCustomerBtn&quot;&gt;Add Customer&lt;/button&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &lt;!-- Kanban Board --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;div class=&quot;board&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- Leads Column --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;div class=&quot;column&quot; data-status=&quot;leads&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Leads&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card-container&quot; id=&quot;leadsContainer&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- Outreach Column --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;div class=&quot;column&quot; data-status=&quot;outreach&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Outreach&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card-container&quot; id=&quot;outreachContainer&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- Meeting Booked Column --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;div class=&quot;column&quot; data-status=&quot;meeting-booked&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Meeting Booked&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card-container&quot; id=&quot;meetingBookedContainer&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- Meeting Attended Column --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;div class=&quot;column&quot; data-status=&quot;meeting-attended&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Meeting Attended&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card-container&quot; id=&quot;meetingAttendedContainer&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- Adoption Successful Column --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;div class=&quot;column&quot; data-status=&quot;adoption-successful&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Adoption Successful&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card-container&quot; id=&quot;adoptionSuccessfulContainer&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;!-- Adoption Failed Column --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;div class=&quot;column&quot; data-status=&quot;adoption-failed&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;h2&gt;Adoption Failed&lt;/h2&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;card-container&quot; id=&quot;adoptionFailedContainer&quot;&gt;&lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &lt;!-- Adoption Summary --&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;div class=&quot;summary&quot;&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;h3&gt;Adoption Summary&lt;/h3&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;p id=&quot;successPercentage&quot;&gt;Adoption Successful: 0%&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &lt;p id=&quot;failedPercentage&quot;&gt;Adoption Failed: 0%&lt;/p&gt;</span></p><p class="c0"><span class="c1">&nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c1">&nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &lt;script&gt;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; // Utility function to update the adoption percentages</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; function updateSummary() {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; // Get all cards (from any column)</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const allCards = document.querySelectorAll(&#39;.card&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const total = allCards.length;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; // Count cards in Adoption Successful and Adoption Failed columns</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const successCount = document.querySelectorAll(&#39;[data-status=&quot;adoption-successful&quot;] .card&#39;).length;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const failedCount = document.querySelectorAll(&#39;[data-status=&quot;adoption-failed&quot;] .card&#39;).length;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const successPercentage = total ? ((successCount / total) * 100).toFixed(0) : 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const failedPercentage = total ? ((failedCount / total) * 100).toFixed(0) : 0;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;successPercentage&#39;).textContent = `Adoption Successful: ${successPercentage}%`;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;failedPercentage&#39;).textContent = `Adoption Failed: ${failedPercentage}%`;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; // Function to create a new card element with drag events</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; function createCard(text) {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const card = document.createElement(&#39;div&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; card.classList.add(&#39;card&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; card.textContent = text;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; card.setAttribute(&#39;draggable&#39;, &#39;true&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; // Drag start event</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; card.addEventListener(&#39;dragstart&#39;, (e) =&gt; {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; e.dataTransfer.setData(&#39;text/plain&#39;, null); // for Firefox compatibility</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; card.classList.add(&#39;dragging&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; // Store a reference so we know which card is being moved</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; draggingCard = card;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; // Drag end event</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; card.addEventListener(&#39;dragend&#39;, () =&gt; {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; card.classList.remove(&#39;dragging&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; draggingCard = null;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; updateSummary();</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; return card;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; let draggingCard = null;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; // Add new customer card to Leads column on button click</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; document.getElementById(&#39;addCustomerBtn&#39;).addEventListener(&#39;click&#39;, () =&gt; {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const input = document.getElementById(&#39;customerName&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const name = input.value.trim();</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; if (name) {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; const card = createCard(name);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;leadsContainer&#39;).appendChild(card);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; input.value = &#39;&#39;;</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; updateSummary();</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; // Allow dragging and dropping cards between columns</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; const columns = document.querySelectorAll(&#39;.column&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; columns.forEach(column =&gt; {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; const container = column.querySelector(&#39;.card-container&#39;);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; // Allow card drop by preventing default behavior</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; container.addEventListener(&#39;dragover&#39;, (e) =&gt; {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; </span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; container.addEventListener(&#39;drop&#39;, (e) =&gt; {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; e.preventDefault();</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; if (draggingCard) {</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; container.appendChild(draggingCard);</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; &nbsp; updateSummary();</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &nbsp; });</span></p><p class="c0"><span class="c1">&nbsp; &lt;/script&gt;</span></p><p class="c0"><span class="c1">&lt;/body&gt;</span></p><p class="c0"><span class="c1">&lt;/html&gt;</span></p><p class="c0 c2"><span class="c1"></span></p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Success Kanban</title>
+  <!-- Importing Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fb;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    /* Branding header inspired by Doctify.com */
+    header {
+      background-color: #00a1e4;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    /* Input area for new customer names */
+    .new-card {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .new-card input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border: 2px solid #00a1e4;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+    .new-card button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #00a1e4;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 0 4px 4px 0;
+    }
+    .new-card button:hover {
+      background-color: #008acb;
+    }
+    /* Kanban board styles */
+    .board {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+    .column {
+      background-color: #fff;
+      flex: 1;
+      min-width: 200px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+    .column h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+    .card-container {
+      min-height: 100px;
+    }
+    .card {
+      background-color: #fefefe;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 8px;
+      margin-bottom: 8px;
+      cursor: grab;
+    }
+    .card:active {
+      cursor: grabbing;
+    }
+    /* Adoption summary section */
+    .summary {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .summary h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .summary p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Doctify Customer Success Kanban</h1>
+  </header>
+  
+  <!-- New Customer Card Input -->
+  <div class="new-card">
+    <input type="text" id="customerName" placeholder="Enter customer name..." />
+    <button id="addCustomerBtn">Add Customer</button>
+  </div>
+  
+  <!-- Kanban Board -->
+  <div class="board">
+    <!-- Leads Column -->
+    <div class="column" data-status="leads">
+      <h2>Leads</h2>
+      <div class="card-container" id="leadsContainer"></div>
+    </div>
+    <!-- Outreach Column -->
+    <div class="column" data-status="outreach">
+      <h2>Outreach</h2>
+      <div class="card-container" id="outreachContainer"></div>
+    </div>
+    <!-- Meeting Booked Column -->
+    <div class="column" data-status="meeting-booked">
+      <h2>Meeting Booked</h2>
+      <div class="card-container" id="meetingBookedContainer"></div>
+    </div>
+    <!-- Meeting Attended Column -->
+    <div class="column" data-status="meeting-attended">
+      <h2>Meeting Attended</h2>
+      <div class="card-container" id="meetingAttendedContainer"></div>
+    </div>
+    <!-- Adoption Successful Column -->
+    <div class="column" data-status="adoption-successful">
+      <h2>Adoption Successful</h2>
+      <div class="card-container" id="adoptionSuccessfulContainer"></div>
+    </div>
+    <!-- Adoption Failed Column -->
+    <div class="column" data-status="adoption-failed">
+      <h2>Adoption Failed</h2>
+      <div class="card-container" id="adoptionFailedContainer"></div>
+    </div>
+  </div>
+  
+  <!-- Adoption Summary -->
+  <div class="summary">
+    <h3>Adoption Summary</h3>
+    <p id="successPercentage">Adoption Successful: 0%</p>
+    <p id="failedPercentage">Adoption Failed: 0%</p>
+  </div>
+  
+  <script>
+    // Utility function to update the adoption percentages
+    function updateSummary() {
+      // Get all cards (from any column)
+      const allCards = document.querySelectorAll('.card');
+      const total = allCards.length;
+      
+      // Count cards in Adoption Successful and Adoption Failed columns
+      const successCount = document.querySelectorAll('[data-status="adoption-successful"] .card').length;
+      const failedCount = document.querySelectorAll('[data-status="adoption-failed"] .card').length;
+      
+      const successPercentage = total ? ((successCount / total) * 100).toFixed(0) : 0;
+      const failedPercentage = total ? ((failedCount / total) * 100).toFixed(0) : 0;
+      
+      document.getElementById('successPercentage').textContent = `Adoption Successful: ${successPercentage}%`;
+      document.getElementById('failedPercentage').textContent = `Adoption Failed: ${failedPercentage}%`;
+    }
+    
+    // Function to create a new card element with drag events
+    function createCard(text) {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.textContent = text;
+      card.setAttribute('draggable', 'true');
+      
+      // Drag start event
+      card.addEventListener('dragstart', (e) => {
+        e.dataTransfer.setData('text/plain', null); // for Firefox compatibility
+        card.classList.add('dragging');
+        // Store a reference so we know which card is being moved
+        draggingCard = card;
+      });
+      
+      // Drag end event
+      card.addEventListener('dragend', () => {
+        card.classList.remove('dragging');
+        draggingCard = null;
+        updateSummary();
+      });
+      
+      return card;
+    }
+    
+    let draggingCard = null;
+    
+    // Add new customer card to Leads column on button click
+    document.getElementById('addCustomerBtn').addEventListener('click', () => {
+      const input = document.getElementById('customerName');
+      const name = input.value.trim();
+      if (name) {
+        const card = createCard(name);
+        document.getElementById('leadsContainer').appendChild(card);
+        input.value = '';
+        updateSummary();
+      }
+    });
+    
+    // Allow dragging and dropping cards between columns
+    const columns = document.querySelectorAll('.column');
+    columns.forEach(column => {
+      const container = column.querySelector('.card-container');
+      
+      // Allow card drop by preventing default behavior
+      container.addEventListener('dragover', (e) => {
+        e.preventDefault();
+      });
+      
+      container.addEventListener('drop', (e) => {
+        e.preventDefault();
+        if (draggingCard) {
+          container.appendChild(draggingCard);
+        }
+        updateSummary();
+      });
+    });
+  </script>
+</body>
+</html>
+~$git add --all
+~$git commit -m "Initial commit"
+~$git push -u origin main
+
